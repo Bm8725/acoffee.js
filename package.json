@@ -1,0 +1,31 @@
+{
+  "name": "acoffee.js",
+  "version": "0.1.13",
+  "description": "Powerful analytics library for smileliveapp and tiktok trends, powered by smilelive team BM",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.js --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.js --format esm,cjs --dts --watch"
+  },
+  "keywords": ["tiktok", "analytics", "nextjs", "trends"],
+  "peerDependencies": {
+    "react": ">=18",
+    "next": ">=14"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  }
+}
